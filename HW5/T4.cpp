@@ -6,7 +6,7 @@ int main(){
     cin >> m >> n;
     int gcd=1;
 
-    for (int i=2;i<max(n, m);i++) {
+    for (int i=2;i<min(n, m);i++) {
         if (!(m % i) && !(n % i))
             gcd = i;
     }
