@@ -285,10 +285,22 @@ void make_a_move(MinesweeperBoard& board, GmenuResp gmenu_resp) {
 }
 
 
-void check_victory() {
+void check_victory(MinesweeperBoard& board) {
     if (mines_num == 0) {
-        player_state = Won;
-        std::cout << "Congrats! YOU WON THE GAME!";
+        bool vic_state = 1;
+        for (int i = 0; i < x_dim; i++) {
+            for (int j = 0; j < x_dim; j++) {
+                if (board.player_board[i][j] == '.') {
+                    vic_state = 0;
+                }
+            }
+
+        }
+
+        if (vic_state) {
+            player_state = Won;
+            std::cout << "Congrats! YOU WON THE GAME!";
+        }
     }
 }
 
@@ -299,6 +311,6 @@ void play_game(MinesweeperBoard& board) {
         display_menu(GameMenu);
         GmenuResp gmenu_resp = game_menu_handler();
         make_a_move(board, gmenu_resp);
-        check_victory();
+        check_victory(board);
     }
 }
