@@ -289,7 +289,7 @@ void check_victory(MinesweeperBoard& board) {
     if (mines_num == 0) {
         bool vic_state = 1;
         for (int i = 0; i < x_dim; i++) {
-            for (int j = 0; j < x_dim; j++) {
+            for (int j = 0; j < y_dim; j++) {
                 if (board.player_board[i][j] == '.') {
                     vic_state = 0;
                 }
