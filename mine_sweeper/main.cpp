@@ -38,13 +38,23 @@ void play_game(MinesweeperBoard&);
 
 
 int main() {
-    display_menu(MainMenu);
-    if (main_menu_handler()) {
-        // initialize the board and the player
-        MinesweeperBoard board = generate_board(x_dim, y_dim, mines_num);
+    while (true)
+    {
+        display_menu(MainMenu);
+        if (main_menu_handler()) {
+            // initialize the board and the player
+            mines_num = 10;
+            player_state = MidGame;
+            MinesweeperBoard board = generate_board(x_dim, y_dim, mines_num);
 
-        play_game(board);
+            play_game(board);
+        }
+        else {
+            break;
+        }
     }
+    
+
     return 0;
 }
 
@@ -147,7 +157,7 @@ GmenuResp game_menu_handler() {
 
 
 void draw_board(const std::vector<std::vector<char>>& board) {
-    std::cout << "info: Bombs=" << mines_num << '\n' << std::endl;
+    std::cout << "info: Mines=" << mines_num << '\n' << std::endl;
     std::cout << "    ";
     for (size_t i = 0; i < board[0].size(); i++) {
         std::cout << " " << static_cast<char>('a' + i) << "  ";
