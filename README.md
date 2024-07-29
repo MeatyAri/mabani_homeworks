@@ -1,6 +1,6 @@
 # Fundamentals of Programming Homework Answers
 
-Welcome to the Fundamentals of Programming(aka "مبانی برنامه نویسی") Homework Answers repository! 🚀 This space is dedicated to sharing comprehensive answers and solutions to the homework assignments for our classmates. Here, you can find a collection of well-explained solutions that cover various fundamental programming concepts.
+Welcome to the Fundamentals of Programming(aka "مبانی برنامه نویسی", "BP" or "Basic Programming") Homework assignments and Answers repository! 🚀 This space is dedicated to sharing comprehensive answers and solutions to the homework assignments for our classmates. Here, you can find a collection of well-explained solutions that cover various fundamental programming concepts.
 
 ## Table of Contents
 
@@ -43,7 +43,7 @@ Contributions are welcomed! If you have alternative solutions, improved explanat
 1. Fork the repository.
 2. Create a new branch for your contribution:
    ```bash
-   git checkout -b feature/new-solution
+   git checkout -b new_solution
    ```
 3. Make your changes and commit them:
    ```bash
@@ -52,7 +52,7 @@ Contributions are welcomed! If you have alternative solutions, improved explanat
    ```
 4. Push the changes to your fork:
    ```bash
-   git push origin feature/new-solution
+   git push -u origin new_solution
    ```
 5. Open a pull request to the main repository.
 
@@ -70,8 +70,8 @@ You can easily compile and test the provided code on the cloud using Github's Co
 
 5. Ensure that `gcc` is installed in your Codespace. You can do this by running the following command in the terminal:
    ```bash
-   sudo apt-get update
-   sudo apt-get install gcc
+   sudo apt update
+   sudo apt install gcc
    ```
 6. Compile and run your code just like your local environment.
     - here's a tip if you're new to linux and gcc
