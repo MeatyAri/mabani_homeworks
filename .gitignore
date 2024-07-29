@@ -1,4 +1,5 @@
 .vscode/
 alg/
 *.exe
+*.out
 token.txt
